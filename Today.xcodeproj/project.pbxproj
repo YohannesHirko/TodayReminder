@@ -17,6 +17,8 @@
 		5277BDA72BBBF26A007BDF0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277BDA62BBBF26A007BDF0C /* main.m */; };
 		5277BDB12BBBF9BB007BDF0C /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277BDB02BBBF9BB007BDF0C /* Reminder.m */; };
 		52897E7F2BC5224C00FEA30B /* ReminderVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897E7E2BC5224C00FEA30B /* ReminderVCDataSource.m */; };
+		52897E832BC6673000FEA30B /* ReminderDoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897E822BC6673000FEA30B /* ReminderDoneButton.m */; };
+		52897E862BC66D6100FEA30B /* ReminderVCActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897E852BC66D6100FEA30B /* ReminderVCActions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		5277BDB22BBBFA0E007BDF0C /* Reminder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
 		52897E7D2BC5214A00FEA30B /* ReminderVCDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderVCDataSource.h; sourceTree = "<group>"; };
 		52897E7E2BC5224C00FEA30B /* ReminderVCDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderVCDataSource.m; sourceTree = "<group>"; };
+		52897E812BC6670E00FEA30B /* ReminderDoneButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderDoneButton.h; sourceTree = "<group>"; };
+		52897E822BC6673000FEA30B /* ReminderDoneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderDoneButton.m; sourceTree = "<group>"; };
+		52897E842BC66D0500FEA30B /* ReminderVCActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderVCActions.h; sourceTree = "<group>"; };
+		52897E852BC66D6100FEA30B /* ReminderVCActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderVCActions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				5277BD9B2BBBF269007BDF0C /* ReminderViewController.m */,
 				52897E7D2BC5214A00FEA30B /* ReminderVCDataSource.h */,
 				52897E7E2BC5224C00FEA30B /* ReminderVCDataSource.m */,
+				52897E812BC6670E00FEA30B /* ReminderDoneButton.h */,
+				52897E822BC6673000FEA30B /* ReminderDoneButton.m */,
+				52897E842BC66D0500FEA30B /* ReminderVCActions.h */,
+				52897E852BC66D6100FEA30B /* ReminderVCActions.m */,
 			);
 			path = ListViewController;
 			sourceTree = "<group>";
@@ -197,9 +207,11 @@
 				521505752BBD73D600EB6E1D /* TodayDate.m in Sources */,
 				52897E7F2BC5224C00FEA30B /* ReminderVCDataSource.m in Sources */,
 				5277BD962BBBF269007BDF0C /* AppDelegate.m in Sources */,
+				52897E862BC66D6100FEA30B /* ReminderVCActions.m in Sources */,
 				5277BDA72BBBF26A007BDF0C /* main.m in Sources */,
 				5277BDB12BBBF9BB007BDF0C /* Reminder.m in Sources */,
 				5277BD992BBBF269007BDF0C /* SceneDelegate.m in Sources */,
+				52897E832BC6673000FEA30B /* ReminderDoneButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

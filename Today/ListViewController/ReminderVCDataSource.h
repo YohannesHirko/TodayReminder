@@ -10,7 +10,11 @@
 #define ReminderVCDataSource_h
 @interface ReminderViewController (ReminderVCDataSource)
 
-- (void) reminderWithId:(NSString *) uuid;
+- (Reminder *) reminderWithId:(NSString *) uuid;
+- (void) updateReminderWith:(Reminder *) reminder;
+- (void) completeReminderWithId:(NSString *) uuid;
+- (UICellAccessoryCustomView *) doneButtonConfigurationForReminder:(Reminder*) reminder;
+- (void) updateSnapshot:(NSArray *) updateuuids;
 
 @end
 

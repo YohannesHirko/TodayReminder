@@ -9,14 +9,18 @@
 #import "Reminder.h"
 #ifndef ReminderViewController_h
 #define ReminderViewController_h
+
+typedef UICollectionViewDiffableDataSource<NSNumber *, NSString *> DataSource;
+typedef NSDiffableDataSourceSnapshot<NSNumber *, NSString *> Snapshot;
+
 @interface ReminderViewController : UICollectionViewController
 
 @property (copy) UICollectionViewCellConfigurationUpdateHandler configHandler;
 @property (nonatomic) NSMutableArray *reminders;
-@property UICollectionViewDiffableDataSource<NSNumber *, NSString *> *dataSource;
-@property NSDiffableDataSourceSnapshot<NSNumber *, NSString *> *snapshot;
+@property DataSource *dataSource;
+@property Snapshot *snapshot;
 - (UICollectionViewCompositionalLayout *) listLayout;
-- (UICellAccessoryCustomView *) doneButtonConfigurationForReminder:(Reminder*) reminder;
+
 
 @end
 

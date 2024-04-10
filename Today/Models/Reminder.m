@@ -24,7 +24,7 @@ static NSArray *debugReminders;
 }
 
 #ifdef DEBUG
-+ (NSMutableArray *)debugReminders 
++ (NSArray*)debugReminders
 {
     static NSArray *_debugReminders;
     static dispatch_once_t onceToken;

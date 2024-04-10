@@ -19,18 +19,20 @@
 @implementation ReminderViewController
 
 - (void)setReminders {
-    self.reminders = Reminder.debugReminders;
+    NSMutableArray *debugReminders = [[NSMutableArray alloc] initWithArray:Reminder.debugReminders];
+    self.reminders = debugReminders;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     [self reminderWithId:[self.reminders objectAtIndex:6]];
     self.collectionView.collectionViewLayout = self.listLayout;
     
     [self setReminders];
     UICollectionViewCellRegistration *cellRegistration = [UICollectionViewCellRegistration registrationWithCellClass:[UICollectionViewListCell class] configurationHandler:^(UICollectionViewListCell *cell, NSIndexPath *indexPath, NSString *uuid) {
         
-        Reminder *reminder = [self.reminders objectAtIndex:indexPath.item];
+        Reminder *reminder = [self reminderWithId:uuid];
         UIListContentConfiguration *contentConfiguration = cell.defaultContentConfiguration;
         
         contentConfiguration.text = [reminder title];
@@ -86,19 +88,6 @@
     return [UICollectionViewCompositionalLayout layoutWithListConfiguration:listConfiguration];
 }
 
-- (UICellAccessoryCustomView *)doneButtonConfigurationForReminder:(Reminder *)reminder
-{
-    NSString *symboleName = [[NSString alloc] init];
-    if (reminder.isComplete){
-        symboleName = @"circle.fill";
-    }else{
-        symboleName = @"circle";
-    }
-    UIImageSymbolConfiguration *symbolConfiguration = [UIImageSymbolConfiguration configurationWithTextStyle: UIFontTextStyleTitle1];
-    UIImage *image = [UIImage systemImageNamed:symboleName withConfiguration:symbolConfiguration];
-    UIButton *button = [[UIButton alloc] init];
-    [button setImage: image forState: normal];
-    return [[UICellAccessoryCustomView alloc] initWithCustomView:button placement:UICellAccessoryPlacementLeading];
-}
+
 
 @end

@@ -15,7 +15,7 @@
 @property (nonatomic)NSString *notes;
 @property (nonatomic)BOOL isComplete;
 #ifdef DEBUG
-+ (NSArray *) debugReminders;
++ (NSMutableArray *) debugReminders;
 #endif
 - (instancetype) initWithTitle:(NSString *)title dueDate:(NSDate *)dueDate notes:(NSString *)notes;
 @end
