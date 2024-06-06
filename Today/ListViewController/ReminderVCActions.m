@@ -8,9 +8,9 @@
 #import <Foundation/Foundation.h>
 #import "ReminderVCActions.h"
 #import "ReminderVCDataSource.h"
-#import "ReminderViewController.h"
+#import "ReminderListViewController.h"
 
-@implementation ReminderViewController (ReminderVCActions)
+@implementation ReminderListViewController (ReminderVCActions)
 
 - (void) didPressDoneButton:(ReminderDoneButton *)sender
 {

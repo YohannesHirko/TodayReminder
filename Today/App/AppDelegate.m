@@ -17,7 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
+    [[UINavigationBarAppearance alloc] init].backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+        return [UIColor colorNamed:@"TodayNavigationBackground"];
+    }];
+    UINavigationBarAppearance *navBarApperance = [[UINavigationBarAppearance alloc] init];
+    [navBarApperance configureWithOpaqueBackground];
+    
     return YES;
 }
 

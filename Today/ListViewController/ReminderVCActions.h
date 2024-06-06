@@ -5,12 +5,12 @@
 //  Created by Yohannes Hirko on 10/04/2024.
 //
 #import <UIKit/UIKit.h>
-#import "ReminderViewController.h"
+#import "ReminderListViewController.h"
 #import "ReminderDoneButton.h"
 #ifndef ReminderVCActions_h
 #define ReminderVCActions_h
 
-@interface ReminderViewController (ReminderVCActions)
+@interface ReminderListViewController (ReminderVCActions)
 
 - (void) didPressDoneButton:(ReminderDoneButton *)sender;
 

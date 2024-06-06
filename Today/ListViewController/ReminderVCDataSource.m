@@ -10,10 +10,10 @@
 #import "ReminderVCDataSource.h"
 #import "ReminderDoneButton.h"
 #import "ReminderVCActions.h"
-@implementation ReminderViewController (ReminderVCDataSource)
+@implementation ReminderListViewController (ReminderVCDataSource)
 
 
-- (Reminder*) reminderWithId:(NSString *) uuid 
+- (Reminder*) reminderWithId:(NSString *) uuid
 {
     NSInteger index = [self.reminders indexOfObjectPassingTest:^BOOL(Reminder* obj, NSUInteger idx, BOOL* stop) {
         return ([[obj uuid] isEqual:uuid]);
@@ -77,4 +77,16 @@
     return [[UICellAccessoryCustomView alloc] initWithCustomView:button placement:UICellAccessoryPlacementLeading];
 }
 
+- (UIAccessibilityCustomAction *) doneButtonAccecibilityActionFor:(Reminder *) reminder
+{
+    ReminderListViewController * __weak weakSelf = self;
+    NSAttributedString *name = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Toggle complition", @"Reminder done button acccessibility label")];
+    UIAccessibilityCustomAction *action = [[UIAccessibilityCustomAction alloc]
+                                           initWithAttributedName:name
+                                           actionHandler:^BOOL(UIAccessibilityCustomAction * customAction) {
+        [weakSelf completeReminderWithId:reminder.uuid];
+        return  true;
+    }];
+    return action;
+}
 @end

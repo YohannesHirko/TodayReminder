@@ -13,14 +13,14 @@
 typedef UICollectionViewDiffableDataSource<NSNumber *, NSString *> DataSource;
 typedef NSDiffableDataSourceSnapshot<NSNumber *, NSString *> Snapshot;
 
-@interface ReminderViewController : UICollectionViewController
+@interface ReminderListViewController : UICollectionViewController
 
 @property (copy) UICollectionViewCellConfigurationUpdateHandler configHandler;
 @property (nonatomic) NSMutableArray *reminders;
 @property DataSource *dataSource;
 @property Snapshot *snapshot;
 - (UICollectionViewCompositionalLayout *) listLayout;
-
+- (void) pushDetailViewForReminder:(NSString *)uuid;
 
 @end
 

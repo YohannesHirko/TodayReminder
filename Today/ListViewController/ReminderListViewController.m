@@ -7,16 +7,18 @@
 //  Created by Yohannes Hirko on 02/04/2024.
 //
 
-#import "ReminderViewController.h"
+#import "ReminderListViewController.h"
+#import "../DetailViewController/DetailViewController.h"
 #import "ReminderVCDataSource.h"
 #import "Reminder.h"
 #import "TodayDate.h"
 
-@interface ReminderViewController ()
+
+@interface ReminderListViewController ()
 
 @end
 
-@implementation ReminderViewController
+@implementation ReminderListViewController
 
 - (void)setReminders {
     NSMutableArray *debugReminders = [[NSMutableArray alloc] initWithArray:Reminder.debugReminders];
@@ -31,7 +33,7 @@
     
     [self setReminders];
     UICollectionViewCellRegistration *cellRegistration = [UICollectionViewCellRegistration registrationWithCellClass:[UICollectionViewListCell class] configurationHandler:^(UICollectionViewListCell *cell, NSIndexPath *indexPath, NSString *uuid) {
-        
+        NSLog(@"%ld", (long)indexPath.row);
         Reminder *reminder = [self reminderWithId:uuid];
         UIListContentConfiguration *contentConfiguration = cell.defaultContentConfiguration;
         
@@ -47,7 +49,14 @@
         }];
         NSArray *accessories = [[NSArray alloc] initWithObjects:doneButtonConfig,[[UICellAccessoryDisclosureIndicator alloc] init], nil];
         [cell setAccessories:accessories];
-        
+        [cell setAccessibilityCustomActions:@[[self doneButtonAccecibilityActionFor:reminder]]];
+        NSString *accessibilityValue;
+        if (reminder.isComplete) {
+            accessibilityValue =  NSLocalizedString(@"Completed", comment: @"Reminder completed value");
+        } else {
+            NSLocalizedString(@"Not completed", comment: @"Reminder not completed value");
+        }
+        [cell setAccessibilityValue:accessibilityValue];
         UIBackgroundConfiguration *bgConfig = [UIBackgroundConfiguration listGroupedCellConfiguration];
         bgConfig.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             return [UIColor colorNamed:@"TodayListCellBackground"];
@@ -75,6 +84,9 @@
     
     [self.collectionView setDataSource:_dataSource];
     
+    
+    self.navigationItem.title = NSLocalizedString(@"Reminders", "Reminder view controller title");
+    
 }
 
 
@@ -88,6 +100,22 @@
     return [UICollectionViewCompositionalLayout layoutWithListConfiguration:listConfiguration];
 }
 
+-(void)pushDetailViewForReminder:(NSString *)uuid{
+    Reminder *reminder = [Reminder.debugReminders objectAtIndex:0];
+    DetailViewController *viewController = [[DetailViewController alloc] initWithReminder:reminder];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:viewController animated:true];
+    }
+    
+}
 
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSLog(@"%@", indexPath);
+    Reminder *reminder = [Reminder.debugReminders objectAtIndex:indexPath.item];
+    [self pushDetailViewForReminder:reminder.uuid];
+    return NO;
+}
 
 @end

@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		521505752BBD73D600EB6E1D /* TodayDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 521505742BBD73D600EB6E1D /* TodayDate.m */; };
+		5272594F2BD013A300406D0E /* ReminderVCRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5272594E2BD013A300406D0E /* ReminderVCRow.m */; };
 		5277BD962BBBF269007BDF0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277BD952BBBF269007BDF0C /* AppDelegate.m */; };
 		5277BD992BBBF269007BDF0C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277BD982BBBF269007BDF0C /* SceneDelegate.m */; };
-		5277BD9C2BBBF269007BDF0C /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277BD9B2BBBF269007BDF0C /* ReminderViewController.m */; };
+		5277BD9C2BBBF269007BDF0C /* ReminderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277BD9B2BBBF269007BDF0C /* ReminderListViewController.m */; };
 		5277BD9F2BBBF269007BDF0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277BD9D2BBBF269007BDF0C /* Main.storyboard */; };
 		5277BDA12BBBF26A007BDF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5277BDA02BBBF26A007BDF0C /* Assets.xcassets */; };
 		5277BDA42BBBF26A007BDF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277BDA22BBBF26A007BDF0C /* LaunchScreen.storyboard */; };
@@ -19,18 +20,21 @@
 		52897E7F2BC5224C00FEA30B /* ReminderVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897E7E2BC5224C00FEA30B /* ReminderVCDataSource.m */; };
 		52897E832BC6673000FEA30B /* ReminderDoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897E822BC6673000FEA30B /* ReminderDoneButton.m */; };
 		52897E862BC66D6100FEA30B /* ReminderVCActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897E852BC66D6100FEA30B /* ReminderVCActions.m */; };
+		52F9054A2BCF063200F76653 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F905492BCF063200F76653 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		521505732BBD735700EB6E1D /* TodayDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayDate.h; sourceTree = "<group>"; };
 		521505742BBD73D600EB6E1D /* TodayDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayDate.m; sourceTree = "<group>"; };
+		5272594D2BD012F600406D0E /* ReminderVCRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderVCRow.h; sourceTree = "<group>"; };
+		5272594E2BD013A300406D0E /* ReminderVCRow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderVCRow.m; sourceTree = "<group>"; };
 		5277BD912BBBF269007BDF0C /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5277BD942BBBF269007BDF0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5277BD952BBBF269007BDF0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5277BD972BBBF269007BDF0C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		5277BD982BBBF269007BDF0C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5277BD9A2BBBF269007BDF0C /* ReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
-		5277BD9B2BBBF269007BDF0C /* ReminderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
+		5277BD9A2BBBF269007BDF0C /* ReminderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderListViewController.h; sourceTree = "<group>"; };
+		5277BD9B2BBBF269007BDF0C /* ReminderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderListViewController.m; sourceTree = "<group>"; };
 		5277BD9E2BBBF269007BDF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5277BDA02BBBF26A007BDF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5277BDA32BBBF26A007BDF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		52897E822BC6673000FEA30B /* ReminderDoneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderDoneButton.m; sourceTree = "<group>"; };
 		52897E842BC66D0500FEA30B /* ReminderVCActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderVCActions.h; sourceTree = "<group>"; };
 		52897E852BC66D6100FEA30B /* ReminderVCActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderVCActions.m; sourceTree = "<group>"; };
+		52F905482BCF047A00F76653 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		52F905492BCF063200F76653 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				52897E802BC5C81400FEA30B /* Helpers */,
 				5277BDAD2BBBF4B8007BDF0C /* Models */,
 				5277BDB42BBD6E44007BDF0C /* ListViewController */,
+				52F9054B2BCF0BEF00F76653 /* DetailViewController */,
 				5277BDA52BBBF26A007BDF0C /* Info.plist */,
 				5277BD9D2BBBF269007BDF0C /* Main.storyboard */,
 				5277BDA62BBBF26A007BDF0C /* main.m */,
@@ -112,8 +119,8 @@
 		5277BDB42BBD6E44007BDF0C /* ListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5277BD9A2BBBF269007BDF0C /* ReminderViewController.h */,
-				5277BD9B2BBBF269007BDF0C /* ReminderViewController.m */,
+				5277BD9A2BBBF269007BDF0C /* ReminderListViewController.h */,
+				5277BD9B2BBBF269007BDF0C /* ReminderListViewController.m */,
 				52897E7D2BC5214A00FEA30B /* ReminderVCDataSource.h */,
 				52897E7E2BC5224C00FEA30B /* ReminderVCDataSource.m */,
 				52897E812BC6670E00FEA30B /* ReminderDoneButton.h */,
@@ -131,6 +138,17 @@
 				521505742BBD73D600EB6E1D /* TodayDate.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		52F9054B2BCF0BEF00F76653 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52F905482BCF047A00F76653 /* DetailViewController.h */,
+				52F905492BCF063200F76653 /* DetailViewController.m */,
+				5272594D2BD012F600406D0E /* ReminderVCRow.h */,
+				5272594E2BD013A300406D0E /* ReminderVCRow.m */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5277BD9C2BBBF269007BDF0C /* ReminderViewController.m in Sources */,
+				5277BD9C2BBBF269007BDF0C /* ReminderListViewController.m in Sources */,
 				521505752BBD73D600EB6E1D /* TodayDate.m in Sources */,
 				52897E7F2BC5224C00FEA30B /* ReminderVCDataSource.m in Sources */,
 				5277BD962BBBF269007BDF0C /* AppDelegate.m in Sources */,
+				5272594F2BD013A300406D0E /* ReminderVCRow.m in Sources */,
+				52F9054A2BCF063200F76653 /* DetailViewController.m in Sources */,
 				52897E862BC66D6100FEA30B /* ReminderVCActions.m in Sources */,
 				5277BDA72BBBF26A007BDF0C /* main.m in Sources */,
 				5277BDB12BBBF9BB007BDF0C /* Reminder.m in Sources */,
